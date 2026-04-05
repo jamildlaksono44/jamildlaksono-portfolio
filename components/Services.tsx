@@ -80,7 +80,7 @@ export default function Services() {
                     {service.number}
                   </span>
                   <span className="text-muted-foreground">/</span>
-                  <h3 className="font-serif text-xl lg:text-3xl">
+                  <h3 className="font-sans text-xl lg:text-3xl">
                     {service.title}
                   </h3>
                 </div>

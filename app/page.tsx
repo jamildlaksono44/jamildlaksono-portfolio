@@ -5,6 +5,7 @@ import Preloader from '@/components/Preloader'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import HorizontalMarquee from '@/components/HorizontalMarquee'
+import { SERVICE_MARQUEE_ITEMS } from '@/lib/service-marquee-items'
 import Works from '@/components/Works'
 import Services from '@/components/Services'
 import About from '@/components/About'
@@ -12,15 +13,6 @@ import CTASection from '@/components/CTASection'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import { useDarkMode } from '@/hooks/useDarkMode'
-
-const marqueeItems = [
-  'Performance Marketing',
-  'Brand Strategy',
-  'Design & Creative',
-  'Copywriting',
-  'Content Creation',
-  'Digital Marketing',
-]
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -37,7 +29,7 @@ export default function Home() {
         
         <main>
           <Hero />
-          <HorizontalMarquee items={marqueeItems} />
+          <HorizontalMarquee items={[...SERVICE_MARQUEE_ITEMS]} />
           <Works />
           <About />
           <Services />

@@ -26,7 +26,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-2 gap-10 lg:grid-cols-4"
+          className="grid grid-cols-2 gap-10 lg:grid-cols-3"
         >
           {/* Discover */}
           <div>
@@ -42,25 +42,6 @@ export default function Footer() {
                 </a>
               ))}
             </nav>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <p className="section-label mb-6">/ Contact</p>
-            <div className="space-y-3">
-              <a
-                href="mailto:hello@EMAIL.com"
-                className="block text-foreground transition-opacity hover:opacity-60"
-              >
-                hello@EMAIL.com
-              </a>
-              <a
-                href="tel:+62PHONE"
-                className="block text-foreground transition-opacity hover:opacity-60"
-              >
-                +62 PHONE
-              </a>
-            </div>
           </div>
 
           {/* Info */}
@@ -108,19 +89,9 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-border">
         <div className="mx-auto max-w-[1800px] px-6 py-8 lg:px-12">
-          <div className="flex flex-col items-center gap-6 lg:flex-row lg:justify-between">
-            {/* Left */}
-            <p className="text-sm text-muted-foreground order-2 lg:order-1">
-              Jamil D Laksono
-            </p>
-
-            {/* Center - Large Brand Name */}
-            <p className="font-serif text-4xl lg:text-[5vw] text-foreground/10 order-1 lg:order-2">
-              Jamil
-            </p>
-
-            {/* Right */}
-            <p className="text-sm text-muted-foreground order-3">
+          <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+            <p className="text-sm text-muted-foreground">Jamil D Laksono</p>
+            <p className="text-sm text-muted-foreground">
               &copy; 2026 &middot; All rights reserved
             </p>
           </div>

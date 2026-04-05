@@ -46,7 +46,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
       >
         <div className="mx-auto flex h-full max-w-[1800px] items-center justify-between px-6 lg:px-12">
           {/* Logo */}
-          <a href="#home" className="font-serif text-lg text-foreground transition-opacity hover:opacity-60">
+          <a href="#home" className="font-mono text-lg text-foreground transition-opacity hover:opacity-60">
             Jamil D Laksono
           </a>
 

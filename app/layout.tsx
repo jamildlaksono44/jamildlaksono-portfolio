@@ -1,18 +1,17 @@
 import type { Metadata, Viewport } from 'next'
-import { DM_Sans, DM_Serif_Display } from 'next/font/google'
+import { DM_Sans, JetBrains_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const dmSans = DM_Sans({ 
+const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-dm-sans',
   display: 'swap',
 })
 
-const dmSerifDisplay = DM_Serif_Display({ 
-  weight: '400',
+const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
-  variable: '--font-dm-serif-display',
+  variable: '--font-jetbrains-mono',
   display: 'swap',
 })
 
@@ -55,7 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${dmSans.variable} ${dmSerifDisplay.variable} font-sans antialiased`}>
+      <body
+        className={`${jetbrainsMono.variable} ${dmSans.variable} font-mono antialiased`}
+      >
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

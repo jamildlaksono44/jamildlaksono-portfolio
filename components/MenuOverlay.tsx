@@ -65,8 +65,8 @@ export default function MenuOverlay({ isOpen, onClose }: MenuOverlayProps) {
                       onClick={() => handleNavClick(item.href)}
                       className="group flex items-baseline gap-4 text-left transition-opacity hover:opacity-60"
                     >
-                      <span className="font-sans text-sm text-muted-foreground">/ {item.number}</span>
-                      <span className="font-serif text-4xl lg:text-[6vw] leading-none">{item.label}</span>
+                      <span className="font-mono text-sm text-muted-foreground">/ {item.number}</span>
+                      <span className="font-sans text-4xl lg:text-[6vw] leading-none">{item.label}</span>
                     </button>
                   </motion.div>
                 ))}

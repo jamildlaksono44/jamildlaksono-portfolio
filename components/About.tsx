@@ -162,7 +162,7 @@ export default function About() {
                 index < stats.length - 1 ? 'border-r border-border' : ''
               } ${index < 2 ? 'border-b border-border lg:border-b-0' : ''}`}
             >
-              <span className="font-serif text-4xl lg:text-5xl mb-2">
+              <span className="font-sans text-4xl lg:text-5xl mb-2">
                 <CountUp end={stat.value} suffix={stat.suffix} />
               </span>
               <span className="section-label text-center">{stat.label}</span>
@@ -180,7 +180,7 @@ export default function About() {
         >
           {/* Left - Pull Quote */}
           <div className="lg:w-2/5">
-            <blockquote className="font-serif text-3xl lg:text-4xl leading-tight">
+            <blockquote className="font-sans text-3xl lg:text-4xl leading-tight">
               &ldquo;I&apos;ve been doing this long enough to know what actually works.&rdquo;
             </blockquote>
           </div>
@@ -221,7 +221,7 @@ export default function About() {
                     {section.number}
                   </span>
                   <span className="text-muted-foreground">/</span>
-                  <h3 className="font-serif text-xl lg:text-2xl">
+                  <h3 className="font-sans text-xl lg:text-2xl">
                     {section.title}
                   </h3>
                 </div>
@@ -269,7 +269,7 @@ export default function About() {
                                 <span className="font-mono text-sm text-muted-foreground w-24">
                                   {item.year}
                                 </span>
-                                <span className="font-serif text-lg">
+                                <span className="font-sans text-lg">
                                   {item.company}
                                 </span>
                                 <span className="text-muted-foreground">

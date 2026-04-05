@@ -61,8 +61,7 @@
 
 @theme inline {
   --font-sans: var(--font-dm-sans), system-ui, sans-serif;
-  --font-serif: var(--font-dm-serif-display), Georgia, serif;
-  --font-mono: 'Geist Mono', monospace;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-surface: var(--surface);
@@ -128,43 +127,54 @@ html {
 /* Marquee animations */
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 @keyframes marquee-vertical {
   0% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateY(-50%);
+    transform: translate3d(0, -50%, 0);
   }
 }
 
 .animate-marquee {
   animation: marquee 30s linear infinite;
+  backface-visibility: hidden;
+}
+
+.animate-marquee-cta {
+  animation: marquee 46s linear infinite;
+  backface-visibility: hidden;
 }
 
 .animate-marquee-vertical {
-  animation: marquee-vertical 20s linear infinite;
+  animation: marquee-vertical 52s linear infinite;
+  backface-visibility: hidden;
 }
 
 /* Section label styling */
 .section-label {
-  @apply uppercase tracking-[0.2em] text-[11px] opacity-50 font-sans;
+  @apply uppercase tracking-[0.2em] text-[11px] opacity-50 font-mono;
 }
 
-/* Editorial headline styling */
+/* Editorial headline styling (sans accent) */
 .headline-editorial {
-  @apply font-serif leading-[1.0] tracking-tight;
+  @apply font-sans leading-[1.0] tracking-tight;
 }
 
-/* Brutalist button */
+/* Brutalist button — gray ring idle, white ring on hover / active / focus */
 .btn-brutalist {
-  @apply border border-border bg-transparent px-6 py-3 font-serif transition-opacity hover:opacity-60;
+  @apply inline-flex cursor-pointer items-center justify-center border-0 bg-transparent px-6 py-3 font-mono outline-none;
+  @apply ring-2 ring-inset ring-zinc-500 transition-[box-shadow,color] duration-200 ease-out dark:ring-zinc-600;
+  @apply hover:ring-white focus-visible:ring-white active:ring-white;
+  @apply disabled:pointer-events-none disabled:opacity-50 disabled:ring-zinc-500 disabled:hover:ring-zinc-500;
+  @apply dark:disabled:ring-zinc-600 dark:disabled:hover:ring-zinc-600;
 }
 
 /* Accordion row styling */

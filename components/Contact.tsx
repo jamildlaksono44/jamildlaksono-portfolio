@@ -56,7 +56,7 @@ export default function Contact() {
           >
             {isSubmitted ? (
               <div className="flex h-full items-center justify-center border border-border p-12">
-                <p className="font-serif text-xl text-center">
+                <p className="font-sans text-xl text-center">
                   Done! I&apos;ll get back to you as soon as possible.
                 </p>
               </div>
@@ -72,7 +72,7 @@ export default function Contact() {
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                     required
-                    className="w-full border border-border bg-transparent px-4 py-4 font-serif text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+                    className="w-full border border-border bg-transparent px-4 py-4 font-mono text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
                   />
                 </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
                     value={formState.email}
                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                     required
-                    className="w-full border border-border bg-transparent px-4 py-4 font-serif text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
+                    className="w-full border border-border bg-transparent px-4 py-4 font-mono text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors"
                   />
                 </div>
 
@@ -100,7 +100,7 @@ export default function Contact() {
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     required
-                    className="w-full border border-border bg-transparent px-4 py-4 font-serif text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors resize-none"
+                    className="w-full border border-border bg-transparent px-4 py-4 font-mono text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-foreground transition-colors resize-none"
                   />
                 </div>
 

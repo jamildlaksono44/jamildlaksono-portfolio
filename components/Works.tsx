@@ -107,7 +107,7 @@ export default function Works() {
                   <span className="section-label">
                     {project.category}
                   </span>
-                  <h3 className="font-serif text-xl lg:text-2xl">
+                  <h3 className="font-sans text-xl lg:text-2xl">
                     {project.title}
                   </h3>
                 </div>

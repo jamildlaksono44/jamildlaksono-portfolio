@@ -45,7 +45,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <span className="font-serif text-[20vw] leading-none text-foreground">
+            <span className="font-sans text-[20vw] leading-none text-foreground">
               {count.toString().padStart(2, '0')}
             </span>
           </motion.div>

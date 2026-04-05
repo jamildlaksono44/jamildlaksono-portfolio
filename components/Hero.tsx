@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import {
+  SERVICE_MARQUEE_ITEMS,
+  verticalMarqueeCellMinRem,
+} from '@/lib/service-marquee-items'
 
 const rotatingWords = [
   'digital marketing',
@@ -12,14 +16,23 @@ const rotatingWords = [
   'copywriting',
 ]
 
-const verticalMarqueeItems = [
-  'Performance Marketing',
-  'Brand Strategy',
-  'Design',
-  'Copywriting',
-  'Content',
-  'Digital Marketing',
-]
+function VerticalMarqueeStrip() {
+  return (
+    <div className="flex shrink-0 flex-col gap-y-2">
+      {SERVICE_MARQUEE_ITEMS.map((item) => (
+        <div
+          key={item}
+          className="flex w-full shrink-0 items-center justify-center px-1 py-2"
+          style={{ minHeight: `${verticalMarqueeCellMinRem(item)}rem` }}
+        >
+          <span className="section-label inline-block whitespace-nowrap origin-center -rotate-90 text-[10px] tracking-[0.16em]">
+            {item}
+          </span>
+        </div>
+      ))}
+    </div>
+  )
+}
 
 export default function Hero() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
@@ -37,19 +50,11 @@ export default function Hero() {
         {/* Left Column - Vertical Marquee */}
         <div className="hidden w-[15%] border-r border-border lg:block">
           <div className="sticky top-16 h-[calc(100vh-4rem)] overflow-hidden">
-            <div className="animate-marquee-vertical flex flex-col">
-              {[...verticalMarqueeItems, ...verticalMarqueeItems].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex h-32 w-full items-center justify-center"
-                >
-                  <span
-                    className="section-label whitespace-nowrap origin-center -rotate-90"
-                  >
-                    {item}
-                  </span>
-                </div>
-              ))}
+            <div className="animate-marquee-vertical flex shrink-0 flex-col">
+              <VerticalMarqueeStrip />
+              <div aria-hidden className="shrink-0">
+                <VerticalMarqueeStrip />
+              </div>
             </div>
           </div>
         </div>
@@ -87,7 +92,7 @@ export default function Hero() {
             className="mb-8 h-12 overflow-hidden"
           >
             <div className="flex items-baseline gap-2">
-              <span className="font-serif text-xl lg:text-2xl text-foreground">{"Let's do"}</span>
+              <span className="font-mono text-xl lg:text-2xl text-foreground">{"Let's do"}</span>
               <div className="relative h-8 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.span
@@ -96,7 +101,7 @@ export default function Hero() {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -30, opacity: 0 }}
                     transition={{ duration: 0.4, ease: 'easeInOut' }}
-                    className="font-serif text-xl lg:text-2xl text-foreground inline-block"
+                    className="font-mono text-xl lg:text-2xl text-foreground inline-block"
                   >
                     {rotatingWords[currentWordIndex]}
                   </motion.span>
@@ -125,7 +130,7 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="btn-brutalist inline-block font-serif text-lg"
+              className="btn-brutalist text-lg"
             >
               {"Let's work together"} &rarr;
             </a>
