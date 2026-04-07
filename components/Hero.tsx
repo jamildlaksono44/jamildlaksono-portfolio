@@ -189,16 +189,16 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 3.8 }}
+        transition={{ duration: 0.3, delay: 3.8 }}
         className="border-t border-border px-6 py-4 lg:px-12"
       >
         <div className="mx-auto max-w-[1800px]">
           <p className="text-sm text-muted-foreground">
-            <a href="tel:+62PHONE" className="transition-opacity hover:opacity-60">+62 PHONE</a>
+            <a href="tel:+62858160644465" className="transition-opacity hover:opacity-60">+62 858 1606 4465</a>
             {' '}&middot;{' '}
-            <a href="https://instagram.com/INSTAGRAM" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-60">@INSTAGRAM</a>
+            <a href="https://instagram.com/jamildlaksono" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-60">@JAMILDLAKSONO</a>
             {' '}&middot;{' '}
-            <a href="mailto:hello@EMAIL.com" className="transition-opacity hover:opacity-60">hello@EMAIL.com</a>
+            <a href="mailto:jamildlaksono@gmal.com" className="transition-opacity hover:opacity-60">jamildlaksono@gmal.com</a>
           </p>
         </div>
       </motion.div>
