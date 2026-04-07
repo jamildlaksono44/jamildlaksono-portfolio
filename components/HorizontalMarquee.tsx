@@ -45,7 +45,7 @@ export default function HorizontalMarquee({ items, className = '' }: HorizontalM
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className={`hidden md:block overflow-hidden border-y border-border py-4 ${className}`}
+      className={`md:hidden overflow-hidden border-y border-border py-4 ${className}`}
     >
       <div className="flex w-full overflow-hidden">
         <div className="animate-marquee flex min-w-max">
